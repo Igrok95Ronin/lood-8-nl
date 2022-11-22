@@ -1,0 +1,15 @@
+.header {
+    background-color: $bcgColor;
+}
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__img {
+    max-width: 340px;
+
+}
+.btnLink {
+    @include btnLink;
+}
