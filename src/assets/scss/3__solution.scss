@@ -1,0 +1,34 @@
+.solution {
+    background-color: $bcgColor;
+}
+.solution__box {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 50px;
+    padding: 100px 0;
+}
+.solution__img-inner {
+}
+.solution__img {
+    width: 100%;
+}
+.solution__inner {
+}
+.solution__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 53px;
+    color: #fff;
+}
+.solution__dscr {
+    color: $bcgColor2;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+}
+.solution__txt {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.btnLink {
+}
