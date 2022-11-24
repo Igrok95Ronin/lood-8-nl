@@ -1,0 +1,36 @@
+.slider {
+    background-color: $bcgColor2;
+    color: #fff;
+}
+.slider__box {
+    padding: $padding;
+}
+.slider__title {
+    font-weight: 700;
+    font-size: 35px;
+    font-size: 35px;
+    line-height: 40px;
+    text-align: center;
+}
+.slider__dscr {
+    line-height: 1.6;
+    text-align: center;
+}
+.slider__view {
+
+}
+.slider__item {
+}
+.slider__img {
+    width: 100%;
+}
+.slider__name {
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+    background-color: $bcgColor;
+    height: 100px;
+}
+.slick-dots li button:before {
+    font-size: 40px;
+}

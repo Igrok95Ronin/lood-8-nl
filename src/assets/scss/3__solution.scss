@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: .5fr 1fr;
     gap: 50px;
-    padding: 100px 0;
+    padding: $padding;
 }
 .solution__img-inner {
 }
@@ -23,12 +23,10 @@
 .solution__dscr {
     color: $bcgColor2;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 33px;
     line-height: 40px;
 }
 .solution__txt {
     line-height: 1.6;
     margin-bottom: 30px;
-}
-.btnLink {
 }
