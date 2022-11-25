@@ -1,11 +1,11 @@
 <?php
-$site_data      = json_decode(file_get_contents('http://templates.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
+$site_data      = json_decode(file_get_contents('http://local.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
 
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Professionele reparaties voor een eerlijke prijs.'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
@@ -32,7 +32,7 @@ $title = $text . ' ' . $city;
                 <div class="col-12 container">
                     <div class="header__box">
                         <img class="header__img" src="./assets/img/loodgieterheld-logo.png" alt="" >
-                        <a class="btnLink" href="#" ><span>111222333</span></a>
+                        <a class="btnLink" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                     </div>
                 </div>
             </div>
@@ -40,12 +40,12 @@ $title = $text . ' ' . $city;
     </header>
     <!-- Основное содержимое страницы -->
     <main class="main">
-        <section class="headerFon">
+         <section class="headerFon">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
                         <div class="headerFon__box">
-                            <h1 class="headerFon__title">Professionele reparaties voor een eerlijke prijs.</h1>
+                            <h1 class="headerFon__title"><?= $title ?></h1>
                             <p class="headerFon__dscr">Of het nu gaat om het vervangen van een kraan of het opsporen van een lekkage. Onze lokale professionals verhelpen uw probleem in no-time!</p>
                             <ul class="headerFon__ul">
                                 <li class="headerFon__li">✓ 24/7 Loodgieter service</li>
@@ -54,7 +54,7 @@ $title = $text . ' ' . $city;
                                 <li class="headerFon__li">✓ Gecertificeerde loodgieters</li>
                                 <li class="headerFon__li">✓ Schadevrij te werk</li>
                             </ul>
-                            <a class="btnLink" href="#" >111222333</a>
+                            <a class="btnLink" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,9 @@ $title = $text . ' ' . $city;
                                 <h2 class="solution__title">Last van een verstopping?</h2>
                                 <p class="solution__dscr">We hebben een oplossing voor ieder probleem!</p>
                                 <p class="solution__txt">Ons team van experts en specialisten staan klaar om u te helpen met de kleinste tot grootste problemen op gebied van lekkages en verstoppingen! Geen klus is te groot of moeilijk voor onze loodgieters. U kunt ons altijd telefonisch bereiken voor meer informatie.</p>
-                                <a class="btnLink" href="#" >111222333</a>
+                                <div class="bntLink__inner">
+                                    <a class="btnLink" href="<?= $phone_href ?>" ><span>Bel:<?= $phone_name ?></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -126,7 +128,9 @@ $title = $text . ' ' . $city;
                                 <h2 class="region__title">Uw professionele ontstoppingsdienst in uw regio.</h2>
                                 <p class="region__dscr">De oplossing voor al uw rioolproblemen! Loodgieter van Bommel is al jaren expert op het gebied van rioleringsproblemen. Onze loodgieters kunnen u in bijna alle situaties van dienst zijn en vertellen u hier graag meer over.</p>
                                 <p class="region__dscr">Ons team bestaat uit loodgieters die zijn opgeleid om het hoogste niveau van klanttevredenheid te garanderen. Zij beschikken ieder over veel kennis binnen hun vakgebied.</p>
-                                <a href="" class="btnLink"><span>Bel direct! 111222333</span></a>
+                                <div class="btnLink__inner">
+                                    <a href="<?= $phone_href ?>" class="btnLink"><span>Bel direct! <?= $phone_name ?></span></a>
+                                </div>
                             </div>
                             <div class="region__right">
                                 <div class="region__wrapper">
@@ -204,7 +208,39 @@ $title = $text . ' ' . $city;
                                 <h2 class="rightNow__title">Nu een loodgieter nodig? - Wij staan direct voor u klaar</h2>
                                 <p class="rightNow__dscr">Geen klus is te groot of moeilijk voor onze loodgieters. Met veel ervaring zorgen we bij iedere klus weer voor een goede ervaring bij onze klanten. Bel direct voor een afspraak.</p>
                             </div>
-                            <a class="btnLink btnLink2" href="#" ><span>Bel direct! 111222333</span></a>
+                            <a class="btnLink btnLink2" href="<?= $phone_href ?>" ><span>Bel direct! <?= $phone_name ?></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forms">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <div class="forms__box">
+                            <div class="ps-lg-5 ps-md-0" style="max-width: 900px;margin:45px auto;">
+                                <form id="jq_form" >
+                                    <h5 class="text-center fw-bold text-secondary">Offerte aanvragen<h5>
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="Uw Naam" name="jq_name" type="text">
+                                        <div id="jq_name" style="font-size:15px;color:red;display:none">Het veld mag niet leeg zijn.</div>
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="Telefoonnummer" name="jq_phone" type="text">
+                                        <div id="jq_phone" style="font-size:15px;color:red;display:none">Het veld mag niet leeg zijn.</div>
+                                    </div> 
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="E-Mail" name="jq_email" type="text"> 
+                                    </div>
+                                    <div class="my-3">
+                                        <textarea rows="3" class="form-control" name="jq_text" placeholder="Uw Bericht"></textarea>
+                                        <div id="jq_text" style="font-size:15px;color:red;display:none">Het veld mag niet leeg zijn.</div>
+                                    </div>
+                                    <input class="btn btn-success text-uppercase fw-bold mb-1 px-3 py-2" type="submit" id="jq_submit" value="Verstuur"> 
+                                    <div id="jq_success" style="display:none">The form was sent successfully.</div>
+                                </form>                            
+                            </div>
                         </div>
                     </div>
                 </div>

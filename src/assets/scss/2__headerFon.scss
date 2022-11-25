@@ -19,14 +19,14 @@
     max-width: 620px;
 }
 .headerFon__title {
-    font-size: 46px;
+    font-size: clamp(24px,5vw,46px);
 }
 .headerFon__dscr {
-    font-size: 20px;
+    font-size: clamp(14px, 3vw, 20px);
     line-height: 30px;
 }
 .headerFon__ul {
-    font-size: 19px;
+    font-size: clamp(16px, 5vw, 19px);
     line-height: 29px;
     margin: 30px 0;
     font-weight: 700;

@@ -8,6 +8,8 @@
     padding: $padding;
 }
 .solution__img-inner {
+    display: flex;
+    align-items: center;
 }
 .solution__img {
     width: 100%;
@@ -16,14 +18,14 @@
 }
 .solution__title {
     font-weight: 700;
-    font-size: 50px;
+    font-size: clamp(23px, 5vw, 50px);
     line-height: 53px;
     color: #fff;
 }
 .solution__dscr {
     color: $bcgColor2;
     font-weight: 700;
-    font-size: 33px;
+    font-size: clamp(23px, 5vw, 33px);
     line-height: 40px;
 }
 .solution__txt {

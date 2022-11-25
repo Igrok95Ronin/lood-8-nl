@@ -4,9 +4,9 @@
     padding: 60px 0;
 }
 .rightNow__box {
-    display: grid;
-    grid-template-columns: 1.5fr .5fr;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 100px;
 }
 .rightNow__wrapper {

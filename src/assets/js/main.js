@@ -10,22 +10,21 @@ $(document).ready(function () {
 
         responsive: [/* отзывчивый */
             {
-                breakpoint: 1300,
+                breakpoint: 1025,
                 settings: {
-                    slidesToShow: 7,
-                    slidesToScroll: 5,
-                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 3
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 426,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1

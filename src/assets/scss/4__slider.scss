@@ -7,14 +7,14 @@
 }
 .slider__title {
     font-weight: 700;
-    font-size: 35px;
-    font-size: 35px;
+    font-size: clamp(25px, 5vw, 35px);
     line-height: 40px;
     text-align: center;
 }
 .slider__dscr {
     line-height: 1.6;
     text-align: center;
+    margin-bottom: 30px;
 }
 .slider__view {
 
