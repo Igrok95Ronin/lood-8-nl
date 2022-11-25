@@ -1,0 +1,43 @@
+.emergencyService {
+    background-color: $bcgColor2;
+    color: #fff;
+    padding: $padding;
+}
+.emergencyService__box {
+}
+.emergencyService__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 40px;
+}
+.emergencyService__txt {
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.emergencyService__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 0 0;
+}
+.emergencyService__inner {
+    background-color: $bcgColor;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.emergencyService__name {
+    font-size: 21px;
+    line-height: 28px;
+    color: $bcgColor2;
+    margin: 0 0 20px;
+}
+.emergencyService__dscr {
+    line-height: 20px;
+    margin: 0;
+}
