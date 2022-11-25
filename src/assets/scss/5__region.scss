@@ -1,0 +1,42 @@
+.region {
+    background-color: $bcgColor;
+    color: #fff;
+}
+.region__box {
+    padding: $padding;
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    gap: 100px;
+}
+.region__left {
+}
+.region__title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 40px;
+    color: #def2f1;
+}
+.region__dscr {
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 30px 0;
+}
+.region__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+.region__wrapper {
+}
+.region__inner {
+}
+.region__img {
+}
+.region__name {
+    font-size: 21px;
+    color: $bcgColor2
+}
+.region__text {
+    line-height: 1.6;
+    font-weight: 400;
+}
