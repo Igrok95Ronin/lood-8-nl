@@ -1,0 +1,27 @@
+.rightNow {
+    background-color: $bcgColor;
+    color: #fff;
+    padding: 60px 0;
+}
+.rightNow__box {
+    display: grid;
+    grid-template-columns: 1.5fr .6fr;
+    align-items: flex-start;
+    gap: 100px;
+}
+.rightNow__wrapper {
+}
+.rightNow__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: $bcgColor2;
+    margin-bottom: 20px;
+}
+.rightNow__dscr {
+    line-height: 1.6;
+    margin: 0;
+}
+.btnLink2 {
+    width: 285px;
+}
